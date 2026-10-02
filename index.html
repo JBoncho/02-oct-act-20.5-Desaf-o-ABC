@@ -1,118 +1,1077 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio ABC - Grupo 1</title>
+
+    <title>ABC Challenge - Grupo 1</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
-
 <body>
-    <!--Juan Díaz-->
-    <details>
-        <summary>A - F</summary>
-            <p>A</p>
-            <p>B</p>
-            <p>C</p>
-            <p>D</p>
-            <p>F</p>
-            <p>G</p>
-    </details>
-    <!--Heilen Parra-->
-<!-- letra G -->
-<div class="card" style="width: 18rem;">
-  <img src="/IMAGENES/Letra G.jpg" class="card-img-top" alt="Letra G">
-  <div class="card-body">
-    <h5 class="card-title">G</h5>
-    <p class="card-text">G de Gato</p>
-  </div>
-</div>
-<!-- letra H -->
-<!-- Letra G -->
-<div class="card" data-tipo="consonante" style="width: 18rem;">
-  <img src="/IMAGENES/Letra G.jpg" class="card-img-top" alt="Letra G">
-  <div class="card-body">
-    <h5 class="card-title">G</h5>
-    <p class="card-text">G de Gato</p>
-  </div>
-</div>
 
-<!-- Letra H -->
-<div class="card" data-tipo="consonante" style="width: 18rem;">
-  <img src="/IMAGENES/Letra H.jpg" class="card-img-top" alt="Letra H">
-  <div class="card-body">
-    <h5 class="card-title">H</h5>
-    <p class="card-text">H de Hormiga</p>
-  </div>
-</div>
+    <!-- ==================== NAVBAR ==================== -->
 
-<!-- Letra I -->
-<div class="card" data-tipo="vocal" style="width: 18rem;">
-  <img src="/IMAGENES/Letra I.jpg" class="card-img-top" alt="Letra I">
-  <div class="card-body">
-    <h5 class="card-title">I</h5>
-    <p class="card-text">I de Iguana</p>
-  </div>
-</div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
 
-<!-- Letra J -->
-<div class="card" data-tipo="consonante" style="width: 18rem;">
-  <img src="/IMAGENES/Letra J.jpg" class="card-img-top" alt="Letra J">
-  <div class="card-body">
-    <h5 class="card-title">J</h5>
-    <p class="card-text">J de Jirafa</p>
-  </div>
-</div>
+            <a class="navbar-brand" href="#">
+                ABC Challenge
+            </a>
 
-<!-- Letra K -->
-<div class="card" data-tipo="consonante" style="width: 18rem;">
-  <img src="/IMAGENES/Letra K.jpg" class="card-img-top" alt="Letra K">
-  <div class="card-body">
-    <h5 class="card-title">K</h5>
-    <p class="card-text">K de Koala</p>
-  </div>
-</div>
-    <!--Fer-->
-    <details>
-        <summary>L - P</summary>
-        <p>L</p>
-        <p>M</p>
-        <p>N</p>
-        <p>O</p>
-        <p>P</p>       
-    </details>
-    <!--Aura-->
-    <details>
-        <summary>Q - U</summary>
-            <p>Q</p>
-            <p>R</p>
-            <p>S</p>
-            <p>T</p>
-            <p>U</p>
-    </details>
-    <!--Kevin-->
-    <details>
-        <summary>V - Z</summary>
-            <p>V</p>
-            <p>W</p>
-            <p>X</p>
-            <p>Y</p>
-            <p>Z</p>
-    </details>
+            <span class="navbar-text text-white">
+                Letras descubiertas:
+                <span id="contador">0</span>
+            </span>
+
+        </div>
+    </nav>
+
+
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+
+    <main class="container py-4">
+
+        <!-- Encabezado -->
+
+        <header class="text-center mb-4">
+
+            <h1>
+                Aprendamos el abecedario
+            </h1>
+
+            <p>
+                Descubre las letras del abecedario.
+            </p>
+
+        </header>
+
+
+        <!-- ==================== FILTROS ==================== -->
+
+        <div class="d-flex justify-content-center gap-2 mb-4">
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                onclick="filtrarLetras('vocal')">
+                Vocales
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="filtrarLetras('todas')">
+                Todas
+            </button>
+
+        </div>
+
+
+        <!-- ==================== GALERÍA ==================== -->
+
+        <section id="galeria" class="row g-4">
+
+
+            <!-- ================================================= -->
+            <!-- JUAN: A - F -->
+            <!-- ================================================= -->
+
+
+            <!-- A -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="vocal">
+
+                    <div class="card-front">
+                        <h2>A</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra A.jpg"
+                            class="card-img-top"
+                            alt="Letra A">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                A
+                            </h5>
+
+                            <p class="card-text">
+                                A de Aguacate
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- B -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>B</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra B.jpg"
+                            class="card-img-top"
+                            alt="Letra B">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                B
+                            </h5>
+
+                            <p class="card-text">
+                                B de Ballena
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- C -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>C</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra C.jpg"
+                            class="card-img-top"
+                            alt="Letra C">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                C
+                            </h5>
+
+                            <p class="card-text">
+                                C de Casa
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- D -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>D</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra D.jpg"
+                            class="card-img-top"
+                            alt="Letra D">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                D
+                            </h5>
+
+                            <p class="card-text">
+                                D de Dado
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- E -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="vocal">
+
+                    <div class="card-front">
+                        <h2>E</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra E.jpg"
+                            class="card-img-top"
+                            alt="Letra E">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                E
+                            </h5>
+
+                            <p class="card-text">
+                                E de Elefante
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- F -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>F</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra F.jpg"
+                            class="card-img-top"
+                            alt="Letra F">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                F
+                            </h5>
+
+                            <p class="card-text">
+                                F de Foca
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- HEILEN: G - K -->
+            <!-- ================================================= -->
+
+
+            <!-- G -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>G</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra G.jpg"
+                            class="card-img-top"
+                            alt="Letra G">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                G
+                            </h5>
+
+                            <p class="card-text">
+                                G de Gato
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- H -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>H</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra H.jpg"
+                            class="card-img-top"
+                            alt="Letra H">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                H
+                            </h5>
+
+                            <p class="card-text">
+                                H de Hormiga
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- I -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="vocal">
+
+                    <div class="card-front">
+                        <h2>I</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra I.jpg"
+                            class="card-img-top"
+                            alt="Letra I">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                I
+                            </h5>
+
+                            <p class="card-text">
+                                I de Iguana
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- J -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>J</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra J.jpg"
+                            class="card-img-top"
+                            alt="Letra J">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                J
+                            </h5>
+
+                            <p class="card-text">
+                                J de Jirafa
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- K -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>K</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra K.jpg"
+                            class="card-img-top"
+                            alt="Letra K">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                K
+                            </h5>
+
+                            <p class="card-text">
+                                K de Koala
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- FER: L - P -->
+            <!-- ================================================= -->
+
+
+            <!-- L -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>L</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra L.jpg"
+                            class="card-img-top"
+                            alt="Letra L">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                L
+                            </h5>
+
+                            <p class="card-text">
+                                L de León
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- M -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>M</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra M.jpg"
+                            class="card-img-top"
+                            alt="Letra M">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                M
+                            </h5>
+
+                            <p class="card-text">
+                                M de Mariposa
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- N -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>N</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra N.jpg"
+                            class="card-img-top"
+                            alt="Letra N">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                N
+                            </h5>
+
+                            <p class="card-text">
+                                N de Nube
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- O -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="vocal">
+
+                    <div class="card-front">
+                        <h2>O</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra O.jpg"
+                            class="card-img-top"
+                            alt="Letra O">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                O
+                            </h5>
+
+                            <p class="card-text">
+                                O de Oso
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- P -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>P</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra P.jpg"
+                            class="card-img-top"
+                            alt="Letra P">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                P
+                            </h5>
+
+                            <p class="card-text">
+                                P de Perro
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- AURA: Q - U -->
+            <!-- ================================================= -->
+
+
+            <!-- Q -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>Q</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra Q.jpg"
+                            class="card-img-top"
+                            alt="Letra Q">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Q
+                            </h5>
+
+                            <p class="card-text">
+                                Q de Quimera
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- R -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>R</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra R.jpg"
+                            class="card-img-top"
+                            alt="Letra R">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                R
+                            </h5>
+
+                            <p class="card-text">
+                                R de Retazo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- S -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>S</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra S.jpg"
+                            class="card-img-top"
+                            alt="Letra S">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                S
+                            </h5>
+
+                            <p class="card-text">
+                                S de Sacapuntas
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- T -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>T</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra T.jpg"
+                            class="card-img-top"
+                            alt="Letra T">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                T
+                            </h5>
+
+                            <p class="card-text">
+                                T de Titanio
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- U -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="vocal">
+
+                    <div class="card-front">
+                        <h2>U</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra U.jpg"
+                            class="card-img-top"
+                            alt="Letra U">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                U
+                            </h5>
+
+                            <p class="card-text">
+                                U de Umbral
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- KEVIN: V - Z -->
+            <!-- ================================================= -->
+
+
+            <!-- V -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>V</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra V.jpg"
+                            class="card-img-top"
+                            alt="Letra V">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                V
+                            </h5>
+
+                            <p class="card-text">
+                                V de Vaca
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- W -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>W</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra W.jpg"
+                            class="card-img-top"
+                            alt="Letra W">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                W
+                            </h5>
+
+                            <p class="card-text">
+                                W de Waffle
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- X -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>X</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra X.jpg"
+                            class="card-img-top"
+                            alt="Letra X">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                X
+                            </h5>
+
+                            <p class="card-text">
+                                X de Xilófono
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Y -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>Y</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra Y.jpg"
+                            class="card-img-top"
+                            alt="Letra Y">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Y
+                            </h5>
+
+                            <p class="card-text">
+                                Y de Yoyo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Z -->
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                <div class="card flip-card" data-tipo="consonante">
+
+                    <div class="card-front">
+                        <h2>Z</h2>
+                    </div>
+
+                    <div class="card-back">
+
+                        <img
+                            src="IMAGENES/Letra Z.jpg"
+                            class="card-img-top"
+                            alt="Letra Z">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Z
+                            </h5>
+
+                            <p class="card-text">
+                                Z de Zigzag
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <h3>Integrantes</h3>
+
+        <ul>
+
+            <li>Kevin Holguin Orrego</li>
+            <li>Heilen Parra</li>
+            <li>Juan David Díaz</li>
+            <li>Fernanda Sepúlveda</li>
+            <li>Aura Rodríguez</li>
+
+        </ul>
+
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="script.js"></script>
+
 </body>
-
-<footer>
-    Integrantes:
-    <br>
-    <ul>
-    <li>Kevin Olguin Orrego</li>
-    <li>Heilen Parra</li>
-    <li>Juan David Díaz</li>
-    <li>Fernanda Sepúlveda</li>
-    <li>Aura Rodríguez</li>
-    </ul>
-</footer>
-
 
 </html>
