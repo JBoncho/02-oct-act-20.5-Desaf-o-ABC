@@ -1,0 +1,118 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff3b0, #ffd6e0, #d6f5ff);
+    min-height: 100vh;
+}
+
+/* Títulos de los grupos */
+summary {
+    background-color: #6c63ff;
+    color: white;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al pasar el mouse */
+summary:hover {
+    background-color: #554de0;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* Contenedor de las tarjetas */
+details {
+    margin-bottom: 30px;
+}
+
+/* Tarjetas */
+.card {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
+    width: 18rem !important;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto de las tarjetas */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Imágenes */
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Texto de las tarjetas */
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Letras que están fuera de las tarjetas */
+details > p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6c63ff;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+footer h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin: 5px 0;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
