@@ -7,7 +7,6 @@
 
     <title>ABC Challenge - Grupo 1</title>
 
-    <!-- Bootstrap -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -15,13 +14,10 @@
         crossorigin="anonymous"
     >
 
-    <!-- CSS propio -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- ==================== NAVBAR ==================== -->
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
@@ -39,11 +35,8 @@
     </nav>
 
 
-    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
 
     <main class="container py-4">
-
-        <!-- Encabezado -->
 
         <header class="text-center mb-4">
 
@@ -58,7 +51,6 @@
         </header>
 
 
-        <!-- ==================== FILTROS ==================== -->
 
         <div class="d-flex justify-content-center gap-2 mb-4">
 
@@ -79,17 +71,11 @@
         </div>
 
 
-        <!-- ==================== GALERÍA ==================== -->
 
         <section id="galeria" class="row g-4">
 
 
-            <!-- ================================================= -->
-            <!-- JUAN: A - F -->
-            <!-- ================================================= -->
 
-
-            <!-- A -->
 
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 
@@ -125,40 +111,34 @@
             </div>
 
 
-            <!-- B -->
+<!-- B -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card flip-card"
+     data-tipo="consonante"
+     onclick="voltearCard(this)">
+<img
+                src="IMAGENES/Letra B.jpg"
+                class="card-img-top"
+                alt="Letra B">
 
-                <div class="card flip-card" data-tipo="consonante">
+            <div class="card-body">
 
-                    <div class="card-front">
-                        <h2>B</h2>
-                    </div>
+                <h5 class="card-title">
+                    B
+                </h5>
 
-                    <div class="card-back">
-
-                        <img
-                            src="IMAGENES/Letra B.jpg"
-                            class="card-img-top"
-                            alt="Letra B">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                B
-                            </h5>
-
-                            <p class="card-text">
-                                B de Ballena
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <p class="card-text">
+                    B de Ballena
+                </p>
 
             </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 
             <!-- C -->
